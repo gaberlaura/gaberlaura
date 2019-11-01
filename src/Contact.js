@@ -8,9 +8,9 @@ class Contact extends React.Component{
                 <input type="text" name="fullname"/>
                 <br/><br/>
                 Today's date:
-                <input type="date"/><br/><br/>
+                <input type="date" name="date"/><br/><br/>
                 Email:<br/>
-                <input type="text" name="email"/><br/><br/>
+                <input type="email" name="email"/><br/><br/>
                 Message:<br/>
                 <textarea name="message" rows="10" cols="30"></textarea>
                 <br/><br/>

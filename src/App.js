@@ -12,13 +12,11 @@ function App() {
           <nav className="top-block">
             <a className="resume-link" href='https://github.com/gaberlaura' target="_blank">Github</a>
             <a className="resume-link" href='/LauraGaber.pdf' download>Resume</a>
-            
-              <Link className="contact-link" to="/Contact">Contact</Link>
-             
-           
+            <Link className="contact-link" to="/Contact">Contact</Link>
           </nav>
         </header>
-        <img className="profile-img" src="profilePic.jpg" alt="profile image"></img>
+        <Link className="home-link" to="/"><img className="profile-img" src="profilePic.jpg" alt="profile image"></img></Link>
+        
         <h2 className="name">Laura Gaber</h2>
       </div>
       <body>
