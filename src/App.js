@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link , Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Contact from './Contact.js';
+import Availibility from './Availibility.js';
 import './App.css';
 
 function App() {
@@ -8,10 +9,11 @@ function App() {
     <Router>
     <div className="resume">
       <div className="top-of-page">
-        <header className="resume-header">
+        <header className="nav-header">
           <nav className="top-block">
-            <a className="resume-link" href='https://github.com/gaberlaura' target="_blank">Github</a>
-            <a className="resume-link" href='/LauraGaber.pdf' download>Resume</a>
+            <Link className="nav-link" to="/Availibility"> Availibility </Link>
+            <a className="nav-link" href='https://github.com/gaberlaura' target="_blank">Github</a>
+            <a className="nav-link" href='/LauraGaber.pdf' download>Resume</a>
             <Link className="contact-link" to="/Contact">Contact</Link>
           </nav>
         </header>
@@ -22,10 +24,9 @@ function App() {
       <body>
       <Switch>
         <Route path="/" exact component={()=>{
-
           return (
                 <div>
-                  <h3 className="brief-about">Front-end developer</h3>
+                  <h3 className="brief-about">Full Stack Developer</h3>
                   <h3 className="brief-about">Education:   </h3>   
                   <span className="regular-text">Electrical & Computer Engineering  </span><br/> 
                   <span className="regular-text" >The University of Iowa, Iowa City, IA</span>                                                           
@@ -37,7 +38,8 @@ function App() {
                   <h3 className="brief-about">Technical Skills:</h3>
                   <div className="regular-text">
                     <ul>
-                      <li>Languages: HTML, CSS, JAVASCRIPT, EXTJS, C, C++, SQL, PL/SQL</li>
+                      <li>Languages: HTML, CSS, JAVASCRIPT, SQL</li>
+                      <li>Frameworks/Libraries: React, EXTJS</li>
                       <li>Databases: Oracle, Cassandra, MySQL</li>
                       <li>Operating Systems: Mac, Linux, Windows</li>
                       <li>Development Tools: Git, Visual Studio Code, Putty, PL/SQL developer</li>
