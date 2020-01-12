@@ -1,13 +1,11 @@
 import React from 'react';
 import {Link , Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Contact from './Contact.js';
-import Availibility from './Availibility.js';
 import './App.css';
 
 function App() {
   return (
     <Router>
-    <div className="resume">
       <div className="top-of-page">
         <header className="nav-header">
           <nav className="top-block">
@@ -163,7 +161,6 @@ function App() {
       </Switch>
        
       </body>
-    </div>
     </Router>
   );
 }
