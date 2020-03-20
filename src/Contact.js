@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 
 class Contact extends React.Component{
 
@@ -29,23 +30,20 @@ class Contact extends React.Component{
     
     handleSubmit(e) {
         e.preventDefault();
-        fetch('http://localhost:3000/Contact',{
-            method: "POST",
-            body: JSON.stringify(this.state),
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-          }).then(
-            (response) => (response.json())
-           ).then((response)=>{
-          if (response.status === 'success'){
-            alert("Message Sent."); 
-            this.resetForm()
-          }else if(response.status === 'fail'){
-            alert("Message failed to send.")
-          }
-        })
+
+        var formParams = {
+            name: this.state.name,
+            date: this.state.date,
+            email: this.state.email,
+            notes: this.state.message 
+        };
+         
+        emailjs.send('default_service', 'template_QoO2AlPh', formParams, 'user_mgrC5sBvcdff8v3OP8vWL')
+            .then(function(response) {
+               console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+               console.log('FAILED...', error);
+            });
     }
 
     resetForm(){
