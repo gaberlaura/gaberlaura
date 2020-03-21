@@ -72,7 +72,6 @@ class Contact extends React.Component{
             </form>
         )
     }
- 
 }
     
 export default Contact;
